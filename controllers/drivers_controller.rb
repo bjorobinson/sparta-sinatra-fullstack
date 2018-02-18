@@ -13,7 +13,7 @@ class DriversController < Sinatra::Base
   # index
   get '/drivers' do
     @title = "Drivers Index"
-    @drivers = drivers.all
+    @drivers = Drivers.all
     erb :'driver/index'
   end
 

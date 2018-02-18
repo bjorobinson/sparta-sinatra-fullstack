@@ -16,7 +16,7 @@ class Drivers
   end
 
   def self.hydrate driver_data
-    driver = drivers.new
+    driver = Drivers.new
     driver.id = driver_data['id']
     driver.first_name = driver_data['first_name']
     driver.last_name = driver_data['last_name']

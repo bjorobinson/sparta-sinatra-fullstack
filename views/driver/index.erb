@@ -1,7 +1,7 @@
 <h1>Drivers Index</h1>
 
-<% @users.each do |user| %>
+<% @drivers.each do |driver| %>
 <div>
-  <h3><a href="/<%= user.id %>"><%= user.last_name %></a></h3>
+  <p><a href="/<%= driver.id %>"><%= driver.last_name %></a></p>
 </div>
 <% end %>
