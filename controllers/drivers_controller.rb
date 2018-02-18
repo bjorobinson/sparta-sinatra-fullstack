@@ -11,7 +11,7 @@ class DriversController < Sinatra::Base
   end
 
   # index
-  get '/drivers' do
+  get '/drivers/' do
     @title = "Drivers Index"
     @drivers = Drivers.all
     erb :'driver/index'
@@ -24,13 +24,13 @@ class DriversController < Sinatra::Base
   end
 
   # create
-  post '/drivers' do
+  post '/drivers/' do
     driver = Drivers.new
     driver.first_name = params[:first_name]
     driver.last_name = params[:last_name]
     driver.email = params[:email]
     driver.save
-    redirect '/drivers'
+    redirect '/drivers/'
   end
 
   # show
@@ -48,11 +48,18 @@ class DriversController < Sinatra::Base
   # edit
   get '/drivers/:id/edit' do
     id = params[:id].to_i
-    "Edit"
+    @driver = Drivers.find id
+    erb :'driver/edit'
   end
 
   # update
   put '/drivers/:id' do
-    "Put"
+    id = params[:id].to_i
+    driver = Drivers.find id
+    driver.first_name = params[:first_name]
+    driver.last_name = params[:last_name]
+    driver.email = params[:email]
+    driver.save
+    redirect '/drivers/'
   end
 end
