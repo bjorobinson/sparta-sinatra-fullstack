@@ -23,6 +23,16 @@ class Drivers
     return driver
   end
 
+  def save
+    conn = Drivers.open_connection
+    if (!self.id)
+      sql = "INSERT INTO driver (first_name,last_name,email) VALUES ('#{self.first_name}','#{self.last_name}','#{self.email}')"
+    else
+      sql = "UPDATE driver SET first_name='#{self.first_name}', last_name='#{self.last_name}', email='#{self.email}' WHERE id=#{self.id}"
+    end
+    conn.exec(sql)
+  end
+
   def self.hydrate driver_data
     driver = Drivers.new
     driver.id = driver_data['id']

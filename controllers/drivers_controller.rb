@@ -19,12 +19,18 @@ class DriversController < Sinatra::Base
 
   # new
   get '/drivers/new' do
-    "New"
+    @driver = Drivers.new
+    erb :'driver/new'
   end
 
   # create
   post '/drivers' do
-
+    driver = Drivers.new
+    driver.first_name = params[:first_name]
+    driver.last_name = params[:last_name]
+    driver.email = params[:email]
+    driver.save
+    redirect '/drivers'
   end
 
   # show
@@ -47,6 +53,6 @@ class DriversController < Sinatra::Base
 
   # update
   put '/drivers/:id' do
-
+    "Put"
   end
 end
