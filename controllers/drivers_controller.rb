@@ -42,7 +42,9 @@ class DriversController < Sinatra::Base
 
   # delete
   delete '/drivers/:id' do
-
+    id = params[:id].to_i
+    Drivers.destroy id
+    redirect "/drivers/"
   end
 
   # edit

@@ -5,3 +5,7 @@
 <p><%= @driver.email %><p>
 
 <a href="/drivers/<%= @driver.id %>/edit">Edit</a>
+<form action="/drivers/<%= @driver.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>

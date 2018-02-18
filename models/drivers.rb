@@ -33,6 +33,12 @@ class Drivers
     conn.exec(sql)
   end
 
+  def self.destroy id
+      conn = self.open_connection
+      sql = "DELETE FROM driver where id = #{id}"
+      conn.exec(sql)
+  end
+
   def self.hydrate driver_data
     driver = Drivers.new
     driver.id = driver_data['id']
