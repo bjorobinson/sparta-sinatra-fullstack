@@ -1,0 +1,7 @@
+<h1>Cars Index</h1>
+
+<% @cars.each do |car| %>
+<div>
+  <p><a href="/cars/<%= car.id %>"><%= car.car_model %></a></p>
+</div>
+<% end %>
