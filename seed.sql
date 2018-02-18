@@ -1,34 +1,36 @@
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS driver;
 DROP TABLE IF EXISTS car;
 
-create table user (
+create table driver (
+	id SERIAL PRIMARY KEY,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
 	email VARCHAR(50)
 );
-insert into user (first_name, last_name, email) values ('Martyn', 'Vittori', 'mvittori0@hp.com');
-insert into user (first_name, last_name, email) values ('Renato', 'Danford', 'rdanford1@whitehouse.gov');
-insert into user (first_name, last_name, email) values ('Lucky', 'Kerridge', 'lkerridge2@stumbleupon.com');
-insert into user (first_name, last_name, email) values ('Willyt', 'Phifer', 'wphifer3@indiegogo.com');
-insert into user (first_name, last_name, email) values ('Carla', 'Woller', 'cwoller4@economist.com');
-insert into user (first_name, last_name, email) values ('Jacinda', 'Welch', 'jwelch5@wikipedia.org');
-insert into user (first_name, last_name, email) values ('Illa', 'Polotti', 'ipolotti6@paypal.com');
-insert into user (first_name, last_name, email) values ('Molly', 'Gilffillan', 'mgilffillan7@dedecms.com');
-insert into user (first_name, last_name, email) values ('Verna', 'MacShirie', 'vmacshirie8@usgs.gov');
-insert into user (first_name, last_name, email) values ('Celestina', 'Vanyutin', 'cvanyutin9@pcworld.com');
-insert into user (first_name, last_name, email) values ('Darnell', 'Disley', 'ddisleya@netvibes.com');
-insert into user (first_name, last_name, email) values ('Kizzie', 'Antoniat', 'kantoniatb@opensource.org');
-insert into user (first_name, last_name, email) values ('Braden', 'Ferrand', 'bferrandc@paypal.com');
-insert into user (first_name, last_name, email) values ('Bethina', 'Monaghan', 'bmonaghand@newyorker.com');
-insert into user (first_name, last_name, email) values ('Joelly', 'Brunel', 'jbrunele@fotki.com');
-insert into user (first_name, last_name, email) values ('Kendrick', 'Stonebridge', 'kstonebridgef@vinaora.com');
-insert into user (first_name, last_name, email) values ('Wanda', 'Suett', 'wsuettg@livejournal.com');
-insert into user (first_name, last_name, email) values ('Rakel', 'Hedden', 'rheddenh@ed.gov');
-insert into user (first_name, last_name, email) values ('Eddi', 'Vandenhoff', 'evandenhoffi@slate.com');
-insert into user (first_name, last_name, email) values ('Emma', 'Trobe', 'etrobej@weibo.com');
+insert into driver (first_name, last_name, email) values ('Martyn', 'Vittori', 'mvittori0@hp.com');
+insert into driver (first_name, last_name, email) values ('Renato', 'Danford', 'rdanford1@whitehouse.gov');
+insert into driver (first_name, last_name, email) values ('Lucky', 'Kerridge', 'lkerridge2@stumbleupon.com');
+insert into driver (first_name, last_name, email) values ('Willyt', 'Phifer', 'wphifer3@indiegogo.com');
+insert into driver (first_name, last_name, email) values ('Carla', 'Woller', 'cwoller4@economist.com');
+insert into driver (first_name, last_name, email) values ('Jacinda', 'Welch', 'jwelch5@wikipedia.org');
+insert into driver (first_name, last_name, email) values ('Illa', 'Polotti', 'ipolotti6@paypal.com');
+insert into driver (first_name, last_name, email) values ('Molly', 'Gilffillan', 'mgilffillan7@dedecms.com');
+insert into driver (first_name, last_name, email) values ('Verna', 'MacShirie', 'vmacshirie8@usgs.gov');
+insert into driver (first_name, last_name, email) values ('Celestina', 'Vanyutin', 'cvanyutin9@pcworld.com');
+insert into driver (first_name, last_name, email) values ('Darnell', 'Disley', 'ddisleya@netvibes.com');
+insert into driver (first_name, last_name, email) values ('Kizzie', 'Antoniat', 'kantoniatb@opensource.org');
+insert into driver (first_name, last_name, email) values ('Braden', 'Ferrand', 'bferrandc@paypal.com');
+insert into driver (first_name, last_name, email) values ('Bethina', 'Monaghan', 'bmonaghand@newyorker.com');
+insert into driver (first_name, last_name, email) values ('Joelly', 'Brunel', 'jbrunele@fotki.com');
+insert into driver (first_name, last_name, email) values ('Kendrick', 'Stonebridge', 'kstonebridgef@vinaora.com');
+insert into driver (first_name, last_name, email) values ('Wanda', 'Suett', 'wsuettg@livejournal.com');
+insert into driver (first_name, last_name, email) values ('Rakel', 'Hedden', 'rheddenh@ed.gov');
+insert into driver (first_name, last_name, email) values ('Eddi', 'Vandenhoff', 'evandenhoffi@slate.com');
+insert into driver (first_name, last_name, email) values ('Emma', 'Trobe', 'etrobej@weibo.com');
 
 
 create table car (
+	id SERIAL PRIMARY KEY,
 	car_make VARCHAR(50),
 	car_model VARCHAR(50),
 	production_year VARCHAR(50)

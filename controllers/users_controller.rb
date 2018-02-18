@@ -12,7 +12,9 @@ class UsersController < Sinatra::Base
 
   # index
   get '/users' do
-    "Index"
+    @title = "Users Index"
+    @users = Users.all
+    erb :'user/index'
   end
 
   # new

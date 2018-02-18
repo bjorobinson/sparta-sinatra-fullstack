@@ -1,0 +1,7 @@
+<h1>Users Index</h1>
+
+<% @users.each do |user| %>
+<div>
+  <h3><a href="/<%= user.id %>"><%= user.last_name %></a></h3>
+</div>
+<% end %>
