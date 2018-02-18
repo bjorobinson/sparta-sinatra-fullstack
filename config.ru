@@ -7,5 +7,5 @@ require_relative './controllers/users_controller.rb'
 use Rack::MethodOverride
 
 run Rack::Cascade.new([
-  UsersController
+  DriversController
 ])

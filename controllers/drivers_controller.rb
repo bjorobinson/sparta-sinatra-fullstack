@@ -1,4 +1,4 @@
-class UsersController < Sinatra::Base
+class DriversController < Sinatra::Base
 
   # sets root as the parent-directory of the current file
   set :root, File.join(File.dirname(__FILE__), '..')
@@ -11,41 +11,41 @@ class UsersController < Sinatra::Base
   end
 
   # index
-  get '/users' do
-    @title = "Users Index"
-    @users = Users.all
-    erb :'user/index'
+  get '/drivers' do
+    @title = "Drivers Index"
+    @drivers = drivers.all
+    erb :'driver/index'
   end
 
   # new
-  get '/users/new' do
+  get '/drivers/new' do
     "New"
   end
 
   # create
-  post '/users' do
+  post '/drivers' do
 
   end
 
   # show
-  get '/users/:id' do
+  get '/drivers/:id' do
     id = params[:id].to_i
     "Show"
   end
 
   # delete
-  delete '/users/:id' do
+  delete '/drivers/:id' do
 
   end
 
   # edit
-  get '/users/:id/edit' do
+  get '/drivers/:id/edit' do
     id = params[:id].to_i
     "Edit"
   end
 
   # update
-  put '/users/:id' do
+  put '/drivers/:id' do
 
   end
 end
