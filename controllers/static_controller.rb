@@ -10,6 +10,9 @@ class StaticController < Sinatra::Base
   end
 
   get '/' do
+    @title = "Static Landing"
+    @driver = Drivers.find 1
+    @car = Cars.find 1
     erb :'/static/landing'
   end
 end
