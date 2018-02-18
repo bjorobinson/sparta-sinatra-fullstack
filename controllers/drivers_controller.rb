@@ -30,7 +30,8 @@ class DriversController < Sinatra::Base
   # show
   get '/drivers/:id' do
     id = params[:id].to_i
-    "Show"
+    @driver = Drivers.find id
+    erb :'driver/show'
   end
 
   # delete

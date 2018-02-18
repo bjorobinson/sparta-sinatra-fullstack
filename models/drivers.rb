@@ -15,6 +15,14 @@ class Drivers
     return drivers
   end
 
+  def self.find arg_id
+    conn = self.open_connection
+    sql = "SELECT id,first_name,last_name,email FROM driver WHERE id = #{arg_id} LIMIT 1"
+    results = conn.exec(sql)
+    driver = self.hydrate results.first
+    return driver
+  end
+
   def self.hydrate driver_data
     driver = Drivers.new
     driver.id = driver_data['id']
